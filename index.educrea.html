@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Educativa - Educrea</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #d8b0ff;">
+
+    <!-- HEADER -->
+    <header class="bg-dark text-white text-center py-5 position-relative">
+        <div class="logo">
+            <img src="logo educrea.png" alt="logo" style="left: 20px; top: 20px; width: 100px;" class="position-absolute">
+        </div>
+        <h1>Educrea - Plataforma Educativa</h1>
+        <nav class="d-flex justify-content-center">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#inicio" class="text-white">Inicio</a></li>
+                <li class="list-inline-item"><a href="#cursos" class="text-white">Cursos</a></li>
+                <li class="list-inline-item"><a href="#blog" class="text-white">Blog</a></li>
+                <li class="list-inline-item"><a href="#contacto" class="text-white">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Motor de búsqueda -->
+        <form class="d-flex justify-content-center mt-4" action="resultados_busqueda.html" method="GET">
+            <input class="form-control me-2" type="search" placeholder="¿Qué deseas aprender?" aria-label="Buscar" style="max-width: 400px;">
+            <button class="btn btn-success" type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero bg-light py-5">
+        <div class="hero-content text-center">
+            <h1>Bienvenido a Educrea</h1>
+            <p>Tu plataforma educativa para creativos, diseñada por creativos.</p>
+            <button class="btn btn-primary" onclick="window.location.href='#cursos'">Comenzar</button>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- CURSOS SECTION -->
+        <section id="cursos" class="container my-5">
+            <h2 class="text-center text-primary mb-4">Nuestros Cursos</h2>
+            <div class="row">
+                <!-- Curso 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="matematicas.jpg" class="card-img-top" alt="Curso de Matemáticas" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Curso de Matemáticas</h5>
+                            <p class="card-text">Aprende matemáticas desde cero con nuestros expertos.</p>
+                            <a href="#" class="btn btn-primary">Inscribirse</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Curso 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="ciencia.jpg" class="card-img-top" alt="Curso de Ciencias" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Curso de Ciencias</h5>
+                            <p class="card-text">Explora el mundo de las ciencias con nuestros materiales interactivos.</p>
+                            <a href="#" class="btn btn-primary">Inscribirse</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Curso 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="historia.jpg" class="card-img-top" alt="Curso de Historia" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Curso de Historia</h5>
+                            <p class="card-text">Descubre los eventos más importantes de la historia mundial.</p>
+                            <a href="#" class="btn btn-primary">Inscribirse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG SECTION -->
+        <section id="blog" class="container my-5">
+            <h2 class="text-center text-primary mb-4">Últimos Artículos del Blog</h2>
+            <article class="mb-4">
+                <h3>Cómo mantener la creatividad en la era digital</h3>
+                <p>Explora estrategias para no perder tu chispa creativa en un mundo cada vez más digital.</p>
+            </article>
+            <article>
+                <h3>tendras los mejores profesores para vanzar en cada materia</h3>
+                <p>Descubre las herramientas más avanzadas que todo estudiante desea conocer.</p>
+            </article>
+        </section>
+
+        <!-- CONTACTO SECTION -->
+        <section id="contacto" class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center text-primary mb-4">Contacto</h2>
+                <p class="text-center">Si tienes alguna duda o consulta, no dudes en ponerte en contacto con nosotros.</p>
+                <form action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain" class="d-flex flex-column align-items-center">
+                    <div class="mb-3" style="max-width: 500px; width: 100%;">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required>
+                    </div>
+                    <div class="mb-3" style="max-width: 500px; width: 100%;">
+                        <label for="email" class="form-label">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3" style="max-width: 500px; width: 100%;">
+                        <label for="mensaje" class="form-label">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <input type="submit" value="Enviar" class="btn btn-primary">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="redes">
+            <a href="#" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 Educrea. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
